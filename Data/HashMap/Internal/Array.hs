@@ -63,7 +63,7 @@ module Data.HashMap.Internal.Array
 
       -- * Folds
     , foldl
-    , foldl'
+    , Data.HashMap.Internal.Array.foldl'
     , foldr
     , foldr'
     , foldMap
@@ -218,7 +218,7 @@ shrink mary _n@(I# n#) =
     s' -> (# s', mary #)
 #else
 shrink mary n = cloneM mary 0 n
-#endif 
+#endif
 {-# INLINE shrink #-}
 
 singleton :: a -> Array a
